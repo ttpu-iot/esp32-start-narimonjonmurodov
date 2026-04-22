@@ -20,7 +20,7 @@ void setup(void)
     pinMode(RED, OUTPUT);
 }
 
-void resetB(void);
+void reset_flags(void);
 void reset(void);
 
 void loop(void) 
@@ -34,7 +34,7 @@ void loop(void)
         if (B) 
         {
             Serial.println("band=BLUE");
-            resetB();
+            reset_flags();
             B = false;
         }
     } 
@@ -45,7 +45,7 @@ void loop(void)
         if (G) 
         {
             Serial.println("band=GREEN");
-            resetB();
+            reset_flags();
             G = false;
         }
     } 
@@ -56,7 +56,7 @@ void loop(void)
         if (Y) 
         {
             Serial.println("band=YELLOW");
-            resetB();
+            reset_flags();
             Y = false;
         }
     } 
@@ -67,7 +67,7 @@ void loop(void)
         if (R) 
         {
             Serial.println("band=RED");
-            resetB();
+            reset_flags();
             R = false;
         }
     }
@@ -81,7 +81,7 @@ void reset(void)
     digitalWrite(RED, LOW);
 }
 
-void resetB(void) 
+void reset_flags(void) 
 {
     B = true;
     G = true;
